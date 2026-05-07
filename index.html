@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pengelolaan Lingkungan</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:#f4fff4;
+      color:#333;
+      line-height:1.6;
+    }
+
+    /* NAVBAR */
+
+    nav{
+      width:100%;
+      position:fixed;
+      top:0;
+      left:0;
+      background:rgba(0,0,0,0.5);
+      backdrop-filter:blur(5px);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:15px 8%;
+      z-index:1000;
+    }
+
+    nav h2{
+      color:white;
+      font-size:28px;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+    }
+
+    nav ul li{
+      margin-left:25px;
+    }
+
+    nav ul li a{
+      text-decoration:none;
+      color:white;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#90ee90;
+    }
+
+    /* HERO SECTION */
+
+    .hero{
+      width:100%;
+      height:100vh;
+
+      background:
+      linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+      url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1400')
+      center/cover no-repeat;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:20px;
+      color:white;
+    }
+
+    .hero-content h1{
+      font-size:60px;
+      margin-bottom:20px;
+    }
+
+    .hero-content p{
+      font-size:22px;
+      margin-bottom:30px;
+      max-width:700px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:14px 32px;
+      background:#32cd32;
+      color:white;
+      text-decoration:none;
+      border-radius:10px;
+      transition:0.3s;
+      font-weight:bold;
+    }
+
+    .btn:hover{
+      background:#228b22;
+      transform:scale(1.05);
+    }
+
+    /* CONTENT */
+
+    .container{
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+      padding:80px 0;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:40px;
+      color:#228b22;
+      font-size:35px;
+    }
+
+    .card{
+      background:white;
+      padding:30px;
+      margin-bottom:30px;
+      border-radius:18px;
+      box-shadow:0 5px 20px rgba(0,0,0,0.08);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+    }
+
+    .card h2{
+      color:#228b22;
+      margin-bottom:15px;
+    }
+
+    .card ul{
+      padding-left:20px;
+    }
+
+    /* TIPS CARD */
+
+    .tips{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+      margin-top:20px;
+    }
+
+    .tip-box{
+      background:#eaffea;
+      padding:25px;
+      border-radius:15px;
+      border-left:6px solid #32cd32;
+      transition:0.3s;
+    }
+
+    .tip-box:hover{
+      transform:translateY(-5px);
+    }
+
+    .tip-box h3{
+      margin-bottom:10px;
+      color:#228b22;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#1c5f1c;
+      color:white;
+      text-align:center;
+      padding:25px;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:768px){
+
+      nav{
+        flex-direction:column;
+      }
+
+      nav ul{
+        margin-top:10px;
+      }
+
+      .hero-content h1{
+        font-size:40px;
+      }
+
+      .hero-content p{
+        font-size:18px;
+      }
+
+      .section-title{
+        font-size:28px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav>
+
+    <h2>🌿 EcoLife</h2>
+
+    <ul>
+      <li><a href="#tentang">Tentang</a></li>
+      <li><a href="#cara">Cara</a></li>
+      <li><a href="#tips">Tips</a></li>
+      <li><a href="#r3">3R</a></li>
+    </ul>
+
+  </nav>
+
+  <!-- HERO SECTION -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <h1>Jaga Lingkungan, Selamatkan Masa Depan</h1>
+
+      <p>
+        Mulai dari langkah kecil untuk menjaga bumi tetap hijau,
+        bersih, dan nyaman untuk generasi masa depan.
+      </p>
+
+      <a href="#tentang" class="btn">Pelajari Sekarang</a>
+
+    </div>
+
+  </section>
+
+  <!-- CONTENT -->
+
+  <div class="container">
+
+    <!-- Tentang -->
+
+    <h1 class="section-title" id="tentang">
+      📖 Pengelolaan Lingkungan
+    </h1>
+
+    <div class="card">
+
+      <h2>Apa Itu Pengelolaan Lingkungan?</h2>
+
+      <p>
+        Pengelolaan lingkungan adalah usaha untuk menjaga,
+        melestarikan, dan memperbaiki kualitas lingkungan agar tetap sehat,
+        bersih, dan nyaman bagi semua makhluk hidup.
+      </p>
+
+    </div>
+
+    <!-- Cara -->
+
+    <h1 class="section-title" id="cara">
+      ♻ Cara Menjaga Lingkungan
+    </h1>
+
+    <div class="card">
+
+      <ul>
+        <li>Membuang sampah pada tempatnya</li>
+        <li>Mengurangi penggunaan plastik</li>
+        <li>Menanam pohon dan penghijauan</li>
+        <li>Menghemat listrik dan air</li>
+        <li>Menggunakan transportasi ramah lingkungan</li>
+        <li>Melakukan daur ulang sampah</li>
+        <li>Menjaga kebersihan sungai dan laut</li>
+      </ul>
+
+    </div>
+
+    <!-- Tips -->
+
+    <h1 class="section-title" id="tips">
+      💡 Tips Lingkungan
+    </h1>
+
+    <div class="tips">
+
+      <div class="tip-box">
+        <h3>🌱 Menanam Pohon</h3>
+        <p>
+          Pohon membantu menghasilkan oksigen dan mengurangi polusi udara.
+        </p>
+      </div>
+
+      <div class="tip-box">
+        <h3>💧 Hemat Air</h3>
+        <p>
+          Gunakan air seperlunya agar sumber air tetap terjaga.
+        </p>
+      </div>
+
+      <div class="tip-box">
+        <h3>⚡ Hemat Energi</h3>
+        <p>
+          Matikan lampu dan alat elektronik saat tidak digunakan.
+        </p>
+      </div>
+
+      <div class="tip-box">
+        <h3>♻ Daur Ulang</h3>
+        <p>
+          Pisahkan sampah organik dan anorganik agar mudah didaur ulang.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- 3R -->
+
+    <h1 class="section-title" id="r3">
+      🔄 Prinsip 3R
+    </h1>
+
+    <div class="tips">
+
+      <div class="tip-box">
+
+        <h3>♻ Reduce (Kurangi)</h3>
+
+        <p>
+          Bawa tas belanja sendiri, hindari sedotan plastik,
+          dan kurangi membeli produk dengan kemasan berlebih.
+        </p>
+
+      </div>
+
+      <div class="tip-box">
+
+        <h3>🔄 Reuse (Gunakan Kembali)</h3>
+
+        <p>
+          Gunakan botol minum (tumbler) dan wadah makanan
+          yang bisa dipakai berulang kali.
+        </p>
+
+      </div>
+
+      <div class="tip-box">
+
+        <h3>🌿 Recycle (Daur Ulang)</h3>
+
+        <p>
+          Salurkan sampah plastik dan kertas ke Bank Sampah
+          agar diolah kembali menjadi produk baru.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      © 2026 Website Pengelolaan Lingkungan | Dibuat oleh Defghi
+    </p>
+
+  </footer>
+
+</body>
+</html>
